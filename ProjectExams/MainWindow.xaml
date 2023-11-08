@@ -1,0 +1,33 @@
+﻿<Window x:Class="ProjectExams.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjectExams"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="350*" />
+            <ColumnDefinition Width="400*" />
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0 0 0 0">
+            <TextBlock  x:Name="www" Margin="0,9,0,5" HorizontalAlignment="Center" FontSize="28" FontWeight="Bold" Text="Welcome!" />
+
+            <TextBlock FontSize="17"  FontWeight="SemiBold" HorizontalAlignment="Center" Text="Log in to your existing account"></TextBlock>
+
+            <Label  Content="Enter your id:" FontWeight="DemiBold"  Margin="0,50,0,0"/>
+            <TextBox Margin="0,0,0,0" Text=""  x:Name="txtUsername" Width="300" FontSize="18"  BorderThickness="2" />
+
+            <Label FontWeight="DemiBold" Content="Enter a password:"  Margin="0,10,0,0"/>
+            <PasswordBox Margin="0,0,0,0" x:Name="txtPassword" Width="300" FontSize="18"  BorderThickness="2"/>
+
+            <Button  Margin="0,20,0,0" x:Name="loginBtn" Background="#FFE0F7FF" BorderBrush="#FFE0F7FF" FontWeight="Bold" Height="53" Width="300"  FontSize="18" Content="LOG IN" Click="loginBtn_Click"></Button>
+
+        </StackPanel>
+        <StackPanel Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" >
+            <Image Source="C:\Users\Gal\source\repos\ProjectExams\ProjectExams\illustration.png"></Image>
+        </StackPanel>
+
+    </Grid>
+</Window>

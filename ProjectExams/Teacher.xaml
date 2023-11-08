@@ -1,0 +1,151 @@
+﻿<Window x:Class="ProjectExams.Teacher"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjectExams"
+        mc:Ignorable="d"
+        Background="AliceBlue"
+        Title="Teacher" Height="450" Width="800" Loaded="Window_Loaded" >
+    <ScrollViewer>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="3*"/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel VerticalAlignment="Stretch"  >
+                <Button Background="WhiteSmoke"  Grid.Row="1" Name="BtnAddExam" Content="Add Exam" Click="BtnAddExam_Click"></Button>
+                <TextBox x:Name="searchBox" TextChanged="OnSearchTextChanged"/>
+                <ListBox Grid.Row="2" Margin="0" VerticalAlignment="Stretch" Name="listBoxExams" SelectionChanged="listBoxExams_SelectionChanged" />
+            </StackPanel>
+            <Grid Grid.Column="1" Grid.Row="0" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="3*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition  Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                <Label FontSize="15" Margin="10,10,10,10" Grid.Row="1" Grid.Column="0"  Name="lblId" Content="Id:" Grid.ColumnSpan="2"  />
+                <TextBox Margin="10,10,10,10" IsReadOnly="true"  Background="White" Name="txtId" Grid.Row="1" Grid.Column="2"   />
+
+                <Label FontSize="15" Margin="10,10,10,10" Grid.Row="2" Grid.Column="0"  Name="lblName" Content="Name Exam:" Grid.ColumnSpan="2"  />
+                <TextBox Margin="10,10,10,10"  Background="White" Name="txtName" Grid.Row="2" Grid.Column="2"   />
+
+                <Label FontSize="15" Margin="10,10,10,10" Grid.Row="3" Grid.Column="0"  Name="lblAge" Content="Name Teacher:" Grid.ColumnSpan="2"  />
+                <TextBox Margin="10,10,10,10" Background="White" Name="nameTeacher" Grid.Row="3" Grid.Column="2"   />
+
+                <Label FontSize="15" Margin="10,10,10,10" Grid.Row="4" Grid.Column="0"  Name="lblDepartment" Content="Beginning time:" Grid.ColumnSpan="2"  />
+                <TextBox Margin="10,10,10,10" Background="White" Name="beginningTime" Grid.Row="4" Grid.Column="2" />
+
+                <Label FontSize="15" Margin="10,10,10,10" Grid.Row="5" Grid.Column="0"  Name="lblDant" Content="Total time:" Grid.ColumnSpan="2" />
+                <TextBox Margin="10,10,10,10" Background="White" Name="totalTime" Grid.Row="5" Grid.Column="2" />
+
+                <Label FontSize="15" Margin="10,10,10,10" Grid.Row="6" Grid.Column="0"  Name="lblDartnt" Content="Date:" Grid.ColumnSpan="2"  />
+                <TextBox Margin="10,10,10,10" Background="White" Name="date" Grid.Row="6" Grid.Column="2" />
+
+
+                <Button FontSize="15" Margin="0,5,0,0" Background="WhiteSmoke" Grid.Row="7"  Grid.Column="0" Content="Add Question" Name="btnQuestion"  Click="addQuestion_Click" />
+                <ListBox Margin="0,0,0,50" Name="listBoxQue" Grid.Row="8" Grid.Column="0" Grid.RowSpan="2" SelectionChanged="listBoxQue_SelectionChanged" />
+
+                
+                <Grid Grid.Row="9" Grid.Column="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="3*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition  Height="auto"/>
+                        <RowDefinition  Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+                    <Label FontSize="15" Grid.Row="1" Grid.Column="0"  Margin="10,10,10,10" Name="lblImage" Content="Image:" Grid.ColumnSpan="2"/>
+                    <Image Name="image"  Grid.Row="1" Grid.Column="1"  HorizontalAlignment="Left" Height="100" Margin="10,0,0,0"  VerticalAlignment="Center" Width="100" Stretch="Fill" />
+                    <Button Content="..." Background="WhiteSmoke" Grid.Row="1" Grid.Column="0"  HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Center" Click="BtnImage_Click"  />
+
+                    <Label FontSize="15"  Grid.Row="2" Grid.Column="0"  Margin="10,10,10,10"  Name="f" Content="Q1:" Grid.ColumnSpan="2"  />
+                    <TextBox Margin="10,10,10,10"  Grid.Row="2" Grid.Column="1" Background="LightGray" Name="Q1" />
+
+                    <Button FontSize="15" Margin="10,10,10,0" Height="auto" Width="auto" Grid.Row="3"  Grid.Column="0"  Content="Add Answer" Name="addAnswer"  Click="addAnswer_Click"  />
+                    <ListBox Margin="10,0,10,10" Name="listBoxAnswers" Grid.Row="4" Grid.Column="0"  Grid.RowSpan="2" SelectionChanged="listBoxAnswer_SelectionChanged" />
+
+                    <Grid Grid.Row="5" Grid.Column="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="3*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition  Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+
+                        </Grid.RowDefinitions>
+                        <Label FontSize="15" Grid.Row="0" Grid.Column="0" Margin="10,10,10,10"  Name="a" Content="Answer:" Grid.ColumnSpan="2"  />
+                        <TextBox Margin="10,10,10,10" Grid.Row="0" Grid.Column="1" Background="LightGray" Name="al" />
+
+                        <TextBlock FontSize="15" Margin="10,10,10,10" Grid.Row="1" Grid.Column="0" TextWrapping="Wrap" Name="lbDartnt" Text="Number of the correct answer:" />
+                        <ComboBox Margin="10,10,10,10" Background="LightGray" Name="comboBox" HorizontalAlignment="Left" Grid.Row="1" Grid.Column="1" />
+
+                        <StackPanel Orientation="Vertical" Grid.Row="2" Grid.Column="0" Margin="0,10,0,0" >
+                            <Label FontSize="15" Grid.Row="0" Grid.Column="0"  HorizontalAlignment="Center"  Content="Total Grades:"></Label>
+                            <Label FontSize="15"  Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" Content="Average Grade:"></Label>
+                            <Label FontSize="15" Grid.Row="2" Grid.Column="0"  HorizontalAlignment="Center"  Content="Highest Grade:"></Label>
+                            <Label FontSize="15" Grid.Row="3" Grid.Column="0" HorizontalAlignment="Center" Content="Lowest Grade:"></Label>
+                        </StackPanel>
+                        <StackPanel Orientation="Vertical" Grid.Row="2" Grid.Column="1" Margin="0,10,0,0" >
+                            <Label x:Name="totalGrades" FontSize="15"  HorizontalAlignment="Center"/>
+                            <Label x:Name="averageGrade" FontSize="15"  HorizontalAlignment="Center"/>
+                            <Label x:Name="highestGrade" FontSize="15"  HorizontalAlignment="Center"/>
+                            <Label x:Name="lowestGrade" FontSize="15"  HorizontalAlignment="Center"/>
+                        </StackPanel>
+
+                        <StackPanel  Orientation="Horizontal" Grid.Row="3" Grid.Column="0"   Margin="0,10,0,0" Grid.ColumnSpan="2" >
+                            <Button FontSize="15" Background="WhiteSmoke" HorizontalAlignment="Left" Margin="10" Height="30" Content="Update Answer" Width="100" Click="saveAnswer_Click" Name="saveAnswer" Grid.Column="0" RenderTransformOrigin="0.637,2.816"  />
+                            <Button FontSize="15" Background="WhiteSmoke" HorizontalAlignment="Left" Margin="10" Height="30" Content="Delete Answer" Width="100"  Name="RemoveAnswer" Click="RemoveAnswer_Click" Grid.Column="1" />
+                        </StackPanel>
+                    </Grid>
+                    <StackPanel  Orientation="Horizontal" Grid.Column="1" Grid.Row="6"  Margin="0,10,0,0" Grid.ColumnSpan="2" >
+                        <Button Background="WhiteSmoke" FontSize="15" HorizontalAlignment="Left" Margin="10" Height="30" Content="Update Question" Width="100" Click="btnSaveQ_Click" Name="btnSaveQ" Grid.Column="0" RenderTransformOrigin="0.637,2.816"  />
+                        <Button Background="WhiteSmoke" FontSize="15" HorizontalAlignment="Left" Margin="10" Height="30" Content="Delete Question" Width="100"  Name="btnRemoveQ" Click="btnRemoveQ_Click" Grid.Column="1" />
+                    </StackPanel>
+                </Grid>
+
+                
+                <StackPanel  Orientation="Horizontal" Grid.Column="1" Grid.Row="16"  Margin="0,10,0,0" Grid.ColumnSpan="2" Grid.RowSpan="7">
+                    <Button Background="WhiteSmoke" FontSize="15" HorizontalAlignment="Right" Margin="10" Height="30" Content="Update Exam" Width="100" Click="btnSave_Click" Name="btnSave" Grid.Column="0" RenderTransformOrigin="0.637,2.816"  />
+                    <Button Background="WhiteSmoke" FontSize="15" HorizontalAlignment="Right" Margin="10" Height="30" Content="Delete Exam" Width="100" Click="btnRemove_Click" Name="btnRemove" Grid.Column="1" />
+                </StackPanel>
+            </Grid>
+        </Grid>
+    </ScrollViewer>
+</Window>

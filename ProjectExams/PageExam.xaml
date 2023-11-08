@@ -1,0 +1,52 @@
+﻿<Window x:Class="ProjectExams.PageExam"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjectExams"
+        mc:Ignorable="d"
+        Background="AliceBlue"
+        Title="PageExam" Height="450" Width="800" Loaded="Window_Loaded">
+    <ScrollViewer>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="3*"/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel VerticalAlignment="Stretch"  >
+                <ListBox Grid.Row="1" Margin="0" VerticalAlignment="Stretch" Name="listBoxQue" SelectionChanged="listBoxExams_SelectionChanged" />
+            </StackPanel>
+            <Button Background="WhiteSmoke" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="15" Margin="40" Height="30" Content="End Exam" Width="100" Click="EndExam_Click"/>
+            <Grid  VerticalAlignment="Stretch"  Grid.Column="1" Grid.Row="0" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="4*"/>
+                </Grid.RowDefinitions>
+                <TextBlock x:Name="qText"  Visibility="Hidden" TextWrapping="Wrap" Grid.Column="1" Grid.Row="0" Text="{Binding Text}" Margin="40,30,10,10"  FontSize="15" FontWeight="SemiBold" />
+                <StackPanel x:Name="qImg" Grid.Column="1" Grid.Row="1" Margin="30" Visibility="Hidden" HorizontalAlignment="Center" VerticalAlignment="Center" Width="400" Height="400">
+                    <Image  Name="img" ></Image>
+                </StackPanel>
+                <StackPanel Grid.Row="2" Grid.Column="1" >
+                    <ListBox x:Name="myListBox">
+
+                        <CheckBox Name="myCheckBox1" Visibility="Hidden" Checked="myCheckBox_Checked"/>
+                        <CheckBox Name="myCheckBox2" Visibility="Hidden" Checked="myCheckBox_Checked" />
+                        <CheckBox Name="myCheckBox3" Visibility="Hidden" Checked="myCheckBox_Checked"/>
+                        <CheckBox Name="myCheckBox4" Visibility="Hidden" Checked="myCheckBox_Checked"/>
+                        <CheckBox Name="myCheckBox5" Visibility="Hidden" Checked="myCheckBox_Checked"/>
+                        <CheckBox Name="myCheckBox6" Visibility="Hidden" Checked="myCheckBox_Checked"/>
+                        <CheckBox Name="myCheckBox7" Visibility="Hidden" Checked="myCheckBox_Checked"/>
+                        <CheckBox Name="myCheckBox8" Visibility="Hidden" Checked="myCheckBox_Checked"/>
+                        <CheckBox Name="myCheckBox9" Visibility="Hidden" Checked="myCheckBox_Checked"/>
+                        <CheckBox Name="myCheckBox10" Visibility="Hidden" Checked="myCheckBox_Checked"/>
+                    </ListBox>
+                </StackPanel>
+
+            </Grid>
+        </Grid>
+    </ScrollViewer>
+</Window>
+

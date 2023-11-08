@@ -1,0 +1,62 @@
+[
+  {
+    "ID": "c439b1da-5467-4771-a7b6-832b8987fb2c",
+    "Name": "Logika",
+    "Date": "0001-01-01T00:00:00",
+    "Teacher": "Dani Kotler",
+    "StartTime": "10:00:00",
+    "TotalTime": 3,
+    "Grades": [
+      [
+        50,
+        209249564
+      ],
+      [
+        10,
+        29249564
+      ],
+      [
+        100,
+        209249564
+      ]
+    ],
+    "Questions": [
+      {
+        "ID": "bd5fb10c-78e8-4559-b948-ff0d4cc28747",
+        "Name": "Question_1",
+        "Text": "",
+        "Answers": [
+          {
+            "Name": "Answer_1",
+            "isRandomized": false
+          },
+          {
+            "Name": "Answer_2",
+            "isRandomized": false
+          },
+          {
+            "Name": "Answer_3",
+            "isRandomized": false
+          }
+        ],
+        "CorrectAnswerIndex": 2,
+        "Img": "file:///C:/Users/Gal/OneDrive/\u05EA\u05DE\u05D5\u05E0\u05D5\u05EA/\u05E6\u05D9\u05DC\u05D5\u05DE\u05D9 \u05DE\u05E1\u05DA/\u05E6\u05D9\u05DC\u05D5\u05DD \u05DE\u05E1\u05DA_20221207_201538.png",
+        "IsRandomized": false
+      },
+      {
+        "ID": "f5e4a5bb-3aac-4775-91d5-2653a33ab9b0",
+        "Name": "Question_2",
+        "Text": "Hey Gadi, This is question!!!!!",
+        "Answers": [
+          {
+            "Name": "dd_1",
+            "isRandomized": false
+          }
+        ],
+        "CorrectAnswerIndex": 1,
+        "Img": "",
+        "IsRandomized": false
+      }
+    ]
+  }
+]
